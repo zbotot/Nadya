@@ -139,7 +139,7 @@ def sendMessageWithMention(to, mid):
         
 def helpmessage():
     helpMessage = "╔═══════════════" + "\n" + \
-                  "╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥" + "\n" + \
+                  "╠ SEPRI BOT PRO" + "\n" + \
                   "║" + "\n" + \
                   "╠══✪〘 Help Message 〙✪══" + "\n" + \
                   "║" + "\n" + \
@@ -237,7 +237,7 @@ def helpmessage():
                   "╠➥ JoinAll" + "\n" + \
                   "╠➥ ByeAll" + "\n" + \
                   "║" + "\n" + \
-                  "╚═〘 Credits By: ©Nadya_TJ™  〙"
+                  "╚═〘 Credits By: sepriche  〙"
     return helpMessage
     
 def helptexttospeech():
@@ -573,7 +573,7 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     nadya.sendMessage(to, str(helpMessage))
-                    nadya.sendContact(to, "u14f64e139a3817afaabe27d237afb36b")
+                    nadya.sendContact(to, "u9f09cfcb17d037e2936b751bd9d40ead")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
                     nadya.sendMessage(to, str(helpTextToSpeech))
@@ -583,12 +583,12 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
-                    nadya.sendMessage(to, "Please Wait...")
+                    nadya.sendMessage(to, "sepri respon..")
                     elapsed_time = time.time() - start
                     nadya.sendMessage(to,format(str(elapsed_time)))
                 elif text.lower() == 'restart':
                   if msg._from in Owner:    
-                    nadya.sendMessage(to, "Please Wait...")
+                    nadya.sendMessage(to, "sepri respon...")
                     time.sleep(5)
                     nadya.sendMessage(to, "Restart Sukses")
                     restartBot()
@@ -600,7 +600,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u14f64e139a3817afaabe27d237afb36b"
+                        owner = "u9f09cfcb17d037e2936b751bd9d40ead"
                         creator = nadya.getContact(owner)
                         contact = nadya.getContact(nadyaMID)
                         grouplist = nadya.getGroupIdsJoined()
@@ -622,27 +622,27 @@ def lineBot(op):
                 elif text.lower() == 'status':
                     try:
                         ret_ = "╔══[ Status ]"
-                        if settings["protect"] == True: ret_ += "\n╠ Protect ✅"
-                        else: ret_ += "\n╠ Protect ❌"
-                        if settings["qrprotect"] == True: ret_ += "\n╠ Qr Protect ✅"
-                        else: ret_ += "\n╠ Qr Protect ❌"
-                        if settings["inviteprotect"] == True: ret_ += "\n╠ Invite Protect ✅"
-                        else: ret_ += "\n╠ Invite Protect ❌"
-                        if settings["cancelprotect"] == True: ret_ += "\n╠ Cancel Protect ✅"
-                        else: ret_ += "\n╠ Cancel Protect ❌"
-                        if settings["autoAdd"] == True: ret_ += "\n╠ Auto Add ✅"
-                        else: ret_ += "\n╠ Auto Add ❌"
-                        if settings["autoJoin"] == True: ret_ += "\n╠ Auto Join ✅"
-                        else: ret_ += "\n╠ Auto Join ❌"
-                        if settings["autoLeave"] == True: ret_ += "\n╠ Auto Leave ✅"
-                        else: ret_ += "\n╠ Auto Leave ❌"
-                        if settings["autoRead"] == True: ret_ += "\n╠ Auto Read ✅"
-                        else: ret_ += "\n╠ Auto Read ❌"
-                        if settings["checkSticker"] == True: ret_ += "\n╠ Check Sticker ✅"
-                        else: ret_ += "\n╠ Check Sticker ❌"
-                        if settings["detectMention"] == True: ret_ += "\n╠ Detect Mention ✅"
-                        else: ret_ += "\n╠ Detect Mention ❌"
-                        ret_ += "\n╚══[ Status ]"
+                        if settings["protect"] == True: ret_ += "\n╠ Protect (ON)"
+                        else: ret_ += "\n╠ Protect (OFF)"
+                        if settings["qrprotect"] == True: ret_ += "\n╠ Qr Protect (ON)"
+                        else: ret_ += "\n╠ Qr Protect (OFF)"
+                        if settings["inviteprotect"] == True: ret_ += "\n╠ Invite Protect (ON)"
+                        else: ret_ += "\n╠ Invite Protect (OFF)"
+                        if settings["cancelprotect"] == True: ret_ += "\n╠ Cancel Protect (ON)"
+                        else: ret_ += "\n╠ Cancel Protect (OFF)"
+                        if settings["autoAdd"] == True: ret_ += "\n╠ Auto Add (ON)"
+                        else: ret_ += "\n╠ Auto Add (OFF)"
+                        if settings["autoJoin"] == True: ret_ += "\n╠ Auto Join (ON)"
+                        else: ret_ += "\n╠ Auto Join (OFF)"
+                        if settings["autoLeave"] == True: ret_ += "\n╠ Auto Leave (ON)"
+                        else: ret_ += "\n╠ Auto Leave (OFF)"
+                        if settings["autoRead"] == True: ret_ += "\n╠ Auto Read (ON)"
+                        else: ret_ += "\n╠ Auto Read (OFF)"
+                        if settings["checkSticker"] == True: ret_ += "\n╠ Check Sticker (ON)"
+                        else: ret_ += "\n╠ Check Sticker (OFF)"
+                        if settings["detectMention"] == True: ret_ += "\n╠ Detect Mention (ON)"
+                        else: ret_ += "\n╠ Detect Mention (OFF)"
+                        ret_ += "\n╚══[ SEPRI BOT ]"
                         nadya.sendMessage(to, str(ret_))
                     except Exception as e:
                         nadya.sendMessage(msg.to, str(e))
@@ -689,10 +689,10 @@ def lineBot(op):
                             nadya.sendMessage(msg.to,"The Ownerlist is empty")
                         else:
                             nadya.sendMessage(msg.to,"Tunggu...")
-                            mc = "╔═══════════════\n╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥\n╠══✪〘 Owner List 〙✪═══\n"
+                            mc = "╔═══════════════\n╠♥ SEPRI BOT\n╠══✪〘 Owner List 〙✪═══\n"
                             for mi_d in admin:
                                 mc += "╠✪ " +nadya.getContact(mi_d).displayName + "\n"
-                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~nad_nad. 〙\n╚═══════════════")
+                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~sepriche. 〙\n╚═══════════════")
 #-------------------------------------------------------------------------------
                 elif msg.text.lower().startswith("adminadd "):
                     if msg._from in Owner:
@@ -740,10 +740,10 @@ def lineBot(op):
                             nadya.sendMessage(msg.to,"The Adminlist is empty")
                         else:
                             nadya.sendMessage(msg.to,"Tunggu...")
-                            mc = "╔═══════════════\n╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥\n╠══✪〘 Admin List 〙✪═══\n"
+                            mc = "╔═══════════════\n╠ SEPRI BOT\n╠══✪〘 Admin List 〙✪═══\n"
                             for mi_d in admin:
                                 mc += "╠✪ " +nadya.getContact(mi_d).displayName + "\n"
-                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~nad_nad. 〙\n╚═══════════════")
+                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~sepriche 〙\n╚═══════════════")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'protect on':
                     if msg._from in Owner:
@@ -1309,15 +1309,15 @@ def lineBot(op):
                                                 except:
                                                     nadya.sendMessage(msg.to,"") 
 #==============================================================================#          
-                elif text.lower() == 'mention':
+                elif text.lower() == 'crot':
                     group = nadya.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
+                    k = len(nama)//19
                     for a in range(k+1):
                         txt = u''
                         s=0
                         b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
+                        for i in group.members[a*19 : (a+1)*19]:
                             b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                             s += 7
                             txt += u'@Alin \n'
@@ -3802,7 +3802,7 @@ def lineBot(op):
                             if nadyaMID in mention["M"]:
                                 if settings["detectMention"] == True:
                                     contact = nadya.getContact(sender)
-                                    nadya.sendMessage(to, "sundala nu")
+                                    nadya.sendMessage(to, "Hadir boss 😛😛😛")
                                     sendMessageWithMention(to, contact.mid)
                                 break
                         
